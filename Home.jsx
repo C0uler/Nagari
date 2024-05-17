@@ -25,7 +25,7 @@ import Currency from "./Currency.jsx"
 
 import { Link } from "react-router-dom";
 
-import web_logo from "./assets/logo.png";
+import web_logo from "./logo.png";
 
 import "./home.css";
 

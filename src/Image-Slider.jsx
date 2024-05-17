@@ -96,17 +96,16 @@ export default function CarouselWithContent() {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              The Beauty of Nature
+              Keindahan Alam
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80"
             >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that quality
-              of air that emanation from old trees, that so wonderfully changes
-              and renews a weary spirit.
+             Temukan pesona menawan air terjun Sumatera Barat. Di balik keindahan gambarnya terdapat esensi yang memikat, sebuah kekuatan penyegar yang memanggil jiwa yang lelah. 
+             Rasakan embun menyegarkan pada kulit Anda, 
+             dengarkan simfoni irama air yang mengalir, dan biarkan diri Anda terbawa ke dunia pembaruan dan penyegaran. Di tengah dekapan alam yang hijau, temukan kedamaian dan inspirasi dalam pesona abadi dari keajaiban alam ini.
             </Typography>
             <div className="flex justify-center gap-2">
               <Link to={{
@@ -133,17 +132,14 @@ export default function CarouselWithContent() {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              The Beauty of Nature
+              Kemuliaan Arsitektur yang Memukau
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80"
             >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that quality
-              of air that emanation from old trees, that so wonderfully changes
-              and renews a weary spirit.
+              Telusuri pesona memikat Sumatera Barat yang mengagumkan. Di balik kemegahannya, terdapat esensi yang menggoda, sebuah daya tarik yang menyegarkan bagi jiwa yang lelah. Nikmati detil yang menakjubkan, dengarkan harmoni bentuk dan ruang yang tercipta, dan biarkan diri Anda terserap dalam suasana yang menawarkan pembaharuan dan penyegaran. Di tengah keindahan alam yang menakjubkan, temukan kedamaian dan inspirasi yang tak terhingga dari keajaiban ini.
             </Typography>
             <div className="flex gap-2">
               <Link to={{
@@ -170,17 +166,14 @@ export default function CarouselWithContent() {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              The Beauty of Nature
+              Kultur yang Beranekaragam
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80"
             >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that quality
-              of air that emanation from old trees, that so wonderfully changes
-              and renews a weary spirit.
+              Terpesona oleh keindahan budaya Sumatera Barat. Di sana, kekuatan tak terlihat memanggil jiwa yang letih. Rasakan kehangatan budaya, dengar harmoni tradisi, dan biarkan diri Anda terhanyut dalam nuansa segar. Di sini, temukan ketenangan dan inspirasi dalam keajaiban budaya yang menakjubkan.
             </Typography>
             <div className="flex gap-2">
               <Link to={{
