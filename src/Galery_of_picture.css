@@ -1,0 +1,185 @@
+.gridBlock {
+    opacity: 0;
+  }
+  
+  .grid-container {
+    margin-top: 12vw;
+    width: 100vw;
+    height: 330vh;
+    position: relative;
+  }
+
+  @media only screen and (max-width: 580px) {
+    .grid-container {
+      margin-top: 0;
+    }
+  }
+  .grid {
+    top: 2vw; /* Adjust or remove if not needed */
+    left: 0;
+    z-index: 1; /* Adjust or remove if not needed */
+    width: 100%; 
+    /* height: auto;  */
+    /* Removed absolute positioning to keep in normal document flow */
+  }
+  
+  @media only screen and (max-width: 580px) {
+    .grid {
+      margin: 0;
+      width: 100vw;
+      height: 89.444vw;
+    }
+  }
+  .gridBlock {
+    background-size: cover;
+    background-color: darkgray;
+  }
+  .gridLayer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    will-change: transform;
+    transform-origin: 44.951% 50%;
+  }
+  .gridLayer:nth-child(1) .gridBlock {
+    top: 3vw;
+    left: 22vw;
+    width: 8vw;
+    height: 6vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(1) .gridBlock {
+      top: 11.111vw;
+      left: 23.889vw;
+      width: 15vw;
+      height: 12vw;
+    }
+  }
+  .gridLayer:nth-child(2) .gridBlock {
+    top: 1vw;
+    left: 32.5vw;
+    width: 13vw;
+    height: 10vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(2) .gridBlock {
+      top: 0;
+      left: 43.333vw;
+      width: 26.389vw;
+      height: 26.389vw;
+    }
+  }
+  .gridLayer:nth-child(3) .gridBlock {
+    left: 2vw;
+    top: 12vw;
+    width: 12vw;
+    height: 12vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(3) .gridBlock {
+      top: 30.278vw;
+      left: 0;
+      width: 26.389vw;
+      height: 26.389vw;
+    }
+  }
+  .gridLayer:nth-child(4) .gridBlock {
+    top: 12vw;
+    left: 17.5vw;
+    width: 30vw;
+    height: 25vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(4) .gridBlock {
+      top: 30.278vw;
+      left: 30.278vw;
+      width: 39.444vw;
+      height: 39.444vw;
+    }
+  }
+  .gridLayer:nth-child(5) {
+    z-index: 1;
+  }
+  .gridLayer:nth-child(5) .gridBlock {
+    top: 10vw;
+    left: 50vw;
+    width: 10vw;
+    height: 10vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(5) .gridBlock {
+      top: 23.889vw;
+      left: 73.889vw;
+      width: 15.278vw;
+      height: 15.278vw;
+    }
+  }
+  .gridLayer a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(5) svg {
+      width: 4.722vw;
+    }
+  }
+  .gridLayer:nth-child(6) .gridBlock {
+    left: 52vw;
+    top: 22vw;
+    width: 16vw;
+    height: 12vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(6) .gridBlock {
+      top: 43.889vw;
+      left: 73.889vw;
+      width: 26.389vw;
+      height: 26.389vw;
+    }
+  }
+  .gridLayer:nth-child(7) .gridBlock {
+    left: 8vw;
+    top: 26.5vw;
+    width: 8vw;
+    height: 8vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(7) .gridBlock {
+      display: none;
+    }
+  }
+  .gridLayer:nth-child(8) .gridBlock {
+    bottom: 4vw;
+    left: 16vw;
+    width: 8vw;
+    height: 8vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(8) .gridBlock {
+      display: none;
+    }
+  }
+  .gridLayer:nth-child(9) .gridBlock {
+    bottom: 6vw;
+    left: 50vw;
+    width: 8vw;
+    height: 8vw;
+  }
+  @media only screen and (max-width: 580px) {
+    .gridLayer:nth-child(9) .gridBlock {
+      top: 73.889vw;
+      left: 58.889vw;
+      width: 15.278vw;
+      height: 15.278vw;
+    }
+  }
+  .gridBlock {
+    display: block;
+    position: absolute;
+  }
+  

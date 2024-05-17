@@ -1,0 +1,128 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan+SC&display=swap');
+
+.MapContainer{
+  border: 2px solid red;
+  width: 45vw;
+  height: 40vh;
+}
+
+
+#MainImg-Container img{
+    width: 50%;
+    height: 100%;
+    /* overflow: overlay; */
+}
+
+#MainImg-Container{
+  z-index: -5 !important;
+  width: 45vw;
+  height: 35vh !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  #MainImg-Container{
+    width: 50vw;
+    height: 25vh !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  #MainImg-Container{
+    width: 100vw;
+    height: 25vh !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  #Thumbnail{
+    width: 90vw !important;
+    height: 8vh !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+
+
+.Destination-title{
+    font-size: xx-large;
+    margin-left: 1rem;
+}
+.TextBox{
+    margin: 0.3rem 1rem ;
+}
+#Caption{
+  font-family: 'Kanit', serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+.Thumbnail{
+  z-index: 0 !important;
+}
+
+#Thumbnail{
+  /* position: absolute; */
+  /* top: 27rem; */
+  z-index: 0 !important;
+  margin-top: 1vh;
+  width: 35vw;
+  height: 10vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .container{
+    height: auto;
+  }
+}
+
+
+#Thumbnail img{
+  z-index: -5 !important;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#container {
+    width: 100vw; /* Set the width to 80% of the parent's width */
+    height: 100vh;
+    margin: auto; /* Center the container horizontally */
+    margin-top: 2%;
+    padding: 0 2%; /* Optional: Add padding inside the container */
+  }
+
+  .Carouser-container {
+    z-index: -5 !important;
+    /* Set a base height using rem units */
+    height: 90vh; /* Adjust the value as needed */
+  }
+  
+  /* Adjust the height for different screen sizes using media queries */
+  @media (max-width: 768px) {
+    .Carouser-container {
+      height: 40vh; /* Smaller screens might need a smaller height */
+    }
+
+    .MapContainer{
+      height: 30vh;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Carouser-container {
+      height: 30vh; /* Even smaller screens might need an even smaller height */
+    }
+  }
+

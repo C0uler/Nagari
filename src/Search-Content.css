@@ -1,0 +1,60 @@
+.Search-Container{
+    width: 98vw;
+}
+
+
+
+/* Base font size for large devices */
+.Search-Container {
+    font-size: calc(1vw + 0.5vh + 0.5vmin);
+  }
+  
+  /* Smaller devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) { 
+    .Search-Container {
+      font-size: calc(1vw + 1vh + 0.5vmin);
+    } 
+  }
+
+  @media (max-width: 420px){
+    .Summary-Container{
+        height: 20vh;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) { 
+    .Search-Container {
+      font-size: calc(1vw + 1vh + 0.75vmin);
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    .Search-Container {
+      font-size: calc(1vw + 1vh + 1vmin);
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .Summary-Container{
+        height: 30vh;
+    }
+    .Search-Container {
+        font-size: calc(1vw + 0.6vh); /* Adjust this value as needed */
+    }
+  }
+
+  @media (min-width: 1700px) {
+    .Summary-Container{
+        height: 30vh;
+    }
+    .Search-Container {
+        font-size: 12px; /* Adjust this value as needed */
+    }
+  }
+  
+
+
+

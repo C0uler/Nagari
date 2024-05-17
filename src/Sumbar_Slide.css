@@ -1,0 +1,79 @@
+@media (max-width: 500px) {
+    :root {
+      font-size: 14px;
+    }
+  }
+  
+  .Showcase ::selection {
+    background: #87cd33;
+    color: white;
+  }
+  
+  .Showcase h1 {
+    font-size: 5rem;
+  }
+  
+  .Showcase h2 {
+    font-size: 2rem;
+  }
+  
+  .Showcase img {
+    width: 100%;
+    height: auto;
+    background: #f0f0f0;
+  }
+  
+  .Showcase ul {
+    padding-left: 1rem;
+    list-style: none;
+  }
+  
+  .Showcase li {
+    flex-shrink: 0;
+    width: clamp(500px, 60vw, 800px);
+    padding-right: 1rem;
+  }
+  
+  .Showcase header {
+    height: 100vh;
+  }
+  
+  .Showcase footer {
+    height: 50vh;
+  }
+  
+  .Showcase :any-link {
+    color: #4e9815;
+  }
+  
+  .Showcase .df {
+    display: flex;
+  }
+  
+  .Showcase .aic {
+    align-items: center;
+  }
+  
+  .Showcase .jcc {
+    justify-content: center;
+  }
+  
+  .Showcase .wrapper {
+    display: flex;
+  }
+  
+  .Showcase .demo-gallery img {
+    height: 60vh; /* Removed !important to avoid specificity issues */
+    width: 60vw; /* Removed !important to avoid specificity issues */
+  }
+  
+  .Showcase .demo-gallery:not(.last) {
+    padding-bottom: 1rem;
+  }
+  
+  .Showcase .demo-text .text {
+    font-size: clamp(8rem, 15vw, 16rem);
+    line-height: 1;
+    font-weight: 900;
+  }
+  
