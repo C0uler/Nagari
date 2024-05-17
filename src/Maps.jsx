@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-import viteLogo from '/vite.svg'
 import './Map.css'
 import "leaflet/dist/leaflet.css"
 import Loader from './Loader.jsx'
