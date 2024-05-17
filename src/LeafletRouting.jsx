@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useMap } from 'react-leaflet';
-import * as L from 'leaflet';
+import {latLng, Routing} from 'leaflet';
 import 'leaflet-routing-machine';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.js';
@@ -33,10 +33,10 @@ const LeafletRouting = (location) => {
   useEffect(() => {
     if (!loading && data) {
       // Create a routing control and add it to the map
-      const routingControl = L.Routing.control({
+      const routingControl = Routing.control({
         waypoints: [
-          L.latLng(data.coords.latitude, data.coords.longitude),
-          L.latLng(parseFloat(location.position[0]), parseFloat(location.position[1])),
+          latLng(data.coords.latitude, data.coords.longitude),
+          latLng(parseFloat(location.position[0]), parseFloat(location.position[1])),
         ],
         geocoder: L.Control.Geocoder.nominatim(),
         showAlternatives: false,
