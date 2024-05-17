@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useMap } from "react-leaflet";
-import "leaflet-control-geocoder/dist/Control.Geocoder.css";
-import "leaflet-control-geocoder/dist/Control.Geocoder.js";
-import L from "leaflet";
-
-
-
+import { useMap } from 'react-leaflet';
+import L, { popup } from 'leaflet';
+import 'leaflet-routing-machine';
+import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
+import 'leaflet-control-geocoder/dist/Control.Geocoder.js';
 
 function userNavigator() {
   const [loading, setLoading] = useState(true);
