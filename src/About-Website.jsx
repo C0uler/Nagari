@@ -8,6 +8,7 @@ import {
     Typography,
   } from "@material-tailwind/react";
   import { HomeIcon, BellIcon, CurrencyDollarIcon } from "@heroicons/react/24/solid";
+
    
   export default function TimelineWithIcon() {
     return (

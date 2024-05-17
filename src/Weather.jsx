@@ -128,7 +128,7 @@ function Weather() {
 
   
 
-  const forecast_value = [[getWeatherCondition(data[32].values.weatherCode),data[32]], [getWeatherCondition(data[33].values.weatherCode),data[33]], [getWeatherCondition(data[34].values.weatherCode),data[34]], [getWeatherCondition(data[35].values.weatherCode),data[35]], [getWeatherCondition(data[36].values.weatherCode),data[36]]];
+  const forecast_value = [[getWeatherCondition(data[8].values.weatherCode),data[8]], [getWeatherCondition(data[33].values.weatherCode),data[9]], [getWeatherCondition(data[9].values.weatherCode),data[9]], [getWeatherCondition(data[10].values.weatherCode),data[10]], [getWeatherCondition(data[11].values.weatherCode),data[11]]];
   console.log(forecast_value[0][0])
   const weather = getWeatherCondition(data[31].values.weatherCode);
 
@@ -144,17 +144,20 @@ function Weather() {
   
   return (
     <>
+    
     <div className='flex justify-center items-center h-1/3 grid grid-row-2'>
       <div className="weather-container m-auto">
         <div className="weather-icon"><img src={weather['source']} alt="" /></div>
-        <div className="temperature">{data[31].values.temperature}</div>
+        <div className="Hourplace">{new Date().getHours()}:00</div>
+        <div className="temperature">{data[7].values.temperature}</div>
         <div className="weather-status">{weather['condition']}</div>
       </div>
 
       <div className="weather-forecast grid grid-cols-5  m-auto mt-4">
         {forecast_value.map((forecast_data, index) => (
-          <div key={index} className="weather-container flex flex-col w-full m-2 items-center gap-3">
+          <div key={index} className={`weather-container flex flex-col w-full m-2 items-center gap-3 col-span-1`}>
             <div className="weather-icon flex justify-center items-center h-24 w-24"><img className=' w-full h-full object-contain' src={forecast_data[0]['source']} alt="" /></div>
+            <div className="Hourplace">{new Date().getHours() + index}:00</div>
             <div className="temperature text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">{forecast_data[1].values.temperature}</div>
             <div className="weather-status">{forecast_data[0]['condition']}</div>
           </div>

@@ -16,7 +16,7 @@ export default function CarouselWithContent() {
 
   return (
     <>
-    <Carousel transition={{ duration: 2 }} className="rounded-xl h-full w-full"
+    <Carousel transition={{ duration: 2 }} className="rounded-xl h-full w-full "
             loop ={true}
             autoplay = {true}
             autoplayDelay = {15000}
@@ -74,7 +74,7 @@ export default function CarouselWithContent() {
                   {new Array(length).fill("").map((_, i) => (
                     <div
                       key={i}
-                      className={`block h-1 cursor-pointer transition rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-8 " : "w-4 "} navigation-dot ${activeIndex === i ? "active" : "not-active"}`}
+                      className={`block h-1 cursor-pointer transition rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-8 " : "w-4 "} navigation-dot ${activeIndex === i ? "dot-active" : "not-active"}`}
                       onClick={() => setActiveIndex(i)}
                     >
                       {activeIndex === i && <div className="filling-animation block h-1 cursor-pointer transition rounded-2xl  content-[''] w-8"></div>}

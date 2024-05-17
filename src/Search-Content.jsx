@@ -11,8 +11,12 @@ import {
   import Data from "./Destination"
   import "./Search-Content.css"
   import SpeedDialWithTextOutside from "./Speed-Dial.jsx"
+  import { useEffect } from "react";
    
   export default function CardDefault() {
+    useEffect(()=>{
+      window.scrollTo(0, 0);
+    })
     return(
     <>
     <div className="flex items-center justify-center text-center">

@@ -146,9 +146,13 @@ export default function StickyNavbar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#ContactUs" className="flex items-center">
-          About Us
-        </a>
+          <Link to={{
+                      pathname: `/AboutUs`,
+                }}>
+            <a href="#ContactUs" className="flex items-center">
+              About Us
+            </a>
+        </Link>
       </Typography>
     </ul>
   );

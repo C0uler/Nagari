@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
  
 export default function SimpleFooter() {
   return (
@@ -7,45 +8,34 @@ export default function SimpleFooter() {
         &copy; Universitas Multimedia Nusantara 
       </Typography>
       <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
+    
         <li>
+        <Link to={{
+                    pathname: `/`,
+                }}> 
           <Typography
             as="a"
             href="#"
             color="blue-gray"
             className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
           >
-            About Us
+            Home
           </Typography>
+        </Link>
         </li>
         <li>
-          <Typography
-            as="a"
-            href="#"
-            color="blue-gray"
-            className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-          >
-            License
-          </Typography>
-        </li>
-        <li>
-          <Typography
-            as="a"
-            href="#"
-            color="blue-gray"
-            className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-          >
-            Contribute
-          </Typography>
-        </li>
-        <li>
-          <Typography
-            as="a"
-            href="#"
-            color="blue-gray"
-            className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-          >
-            Contact Us
-          </Typography>
+        <Link to={{
+                    pathname: `/AboutUs`,
+                }}> 
+            <Typography
+              as="a"
+              href="#"
+              color="blue-gray"
+              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+            >
+              About Us
+            </Typography>
+          </Link>
         </li>
       </ul>
     </footer>

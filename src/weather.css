@@ -59,6 +59,16 @@ body {
     width: 80vw;
   }
   
+  .Hourplace{
+    font-size: 200%;
+  }
+
+  @media (max-width: 375px){
+    #container{
+      height: 125vh;
+    }
+    
+  }
   
   
   

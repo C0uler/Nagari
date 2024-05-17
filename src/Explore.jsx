@@ -4,6 +4,8 @@ import './scss/styles.scss'
 import Weather from './Weather.jsx'
 import Maps from './Maps.jsx'
 
+import { useEffect } from "react";
+
 import { useParams, Link } from "react-router-dom";
 import { Typography } from "@material-tailwind/react";
 import "./Explore.css"
@@ -11,6 +13,10 @@ export default function FeaturedImageGallery() {
   const params = useParams()
   const indexs = params.id;
   const Datas = Data[indexs-1];
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  })
  
   const [active, setActive] = React.useState(
     Datas.imgURL[1],
@@ -71,7 +77,7 @@ export default function FeaturedImageGallery() {
         <div className="Carouser-container grid grid-cols-1 md:grid-cols-10 ">
           <div className="col-span-1 md:col-span-5 text-center md:text-left grid h-auto">
           
-            <h1 className="Destination-title">{Datas.TempatWisata}</h1>
+            <h1 className="Destination-title text-left">{Datas.TempatWisata}</h1>
             <hr />
             <div className="TextBox text-justify text-sm  md:text-md lg:text-lg xl:text-xl">
                 {Datas.ket}
