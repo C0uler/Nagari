@@ -3,6 +3,7 @@ import Explore from './Explore.jsx'
 import SearchContent from "./Search-Content"
 import Home from "./Home.jsx"
 import SumbarSlide from "./Sumbar_Slide.jsx"
+import L from 'leaflet';
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom'
 import footer from "./footer.jsx"
 

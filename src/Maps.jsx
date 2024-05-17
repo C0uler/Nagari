@@ -14,7 +14,7 @@ import {
   Card,
 } from "@material-tailwind/react";
 
-
+import L from 'leaflet';
 import LeafletRouting from "./LeafletRouting.jsx";
 
 import {MapContainer, TileLayer, Popup, Marker, useMap} from "react-leaflet";
