@@ -61,13 +61,13 @@ function getWeatherCondition(weatherCode) {
       case 2100:
         return {"source":cloudy,"condition":'Fog'};
       case 3000:
-        return 'Light Wind';
+        return  {"source":cloudy,"condition":'Light Wind'};
       case 3001:
-        return 'Wind';
+        return {"source":cloudy,"condition":'Wind'};
       case 3002:
-        return 'Strong Wind';
+        return {"source":cloudy,"condition":'Strong Wind'};
       case 4000:
-        return 'Drizzle';
+        return {"source":cloudy,"condition":'Drizzle'};
       case 4001:
         return {"source":rain_cloud,"condition":'Rain'};
       case 4200:
@@ -96,13 +96,13 @@ function getWeatherCondition(weatherCode) {
       case 2100:
         return {"source":cloudy,"condition":'Fog'};
       case 3000:
-        return 'Light Wind';
+        return {"source":cloudy,"condition":'Light Wind'};
       case 3001:
-        return 'Wind';
+        return {"source":cloudy,"condition":'Wind'};
       case 3002:
-        return 'Strong Wind';
+        return {"source":cloudy,"condition":'Strong Wind'};
       case 4000:
-        return 'Drizzle';
+        return {"source":cloudy,"condition":'Drizzle'};
       case 4001:
         return {"source":rain_cloud,"condition":'Rain'};
       case 4200:
