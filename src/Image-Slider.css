@@ -15,6 +15,10 @@
     border: 2px solid white;
     position: relative;
   }
+
+  .Carousel-loader{
+    overflow-y: hidden;
+  }
   
   .dot-active::after {
     content: '';

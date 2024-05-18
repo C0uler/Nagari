@@ -4,6 +4,13 @@
   overflow-x: clip;
 }
 
+@media (max-width: 1200x) {
+  .About-Containers {
+    height: 90vh !important ;
+  }
+}
+
+
 section {
     position: relative;
     height: 120vh;
@@ -50,8 +57,8 @@ section {
     height: 89vh;
   }
 
-  .About-Container{
-    height: 89vh;
+  .About-Containers{
+    height: 89vh !important;
     width: 80vw !important;
     margin-top: 3rem !important;
   }

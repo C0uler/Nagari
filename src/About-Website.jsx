@@ -24,7 +24,7 @@ import {
               </Typography>
             </TimelineHeader>
             <TimelineBody className="pb-8">
-              <Typography color="gary" className="font-normal text-gray-600">
+              <Typography color="gray" className="font-normal text-gray-600">
               8 - 12 Mei
               The 2nd International Minangkabau Leteracy Festival
               Kota Padang, Padang Panjang, Batusangkar <br></br>
@@ -47,7 +47,7 @@ import {
               </Typography>
             </TimelineHeader>
             <TimelineBody className="pb-8">
-              <Typography color="gary" className="font-normal text-gray-600">
+              <Typography color="gray" className="font-normal text-gray-600">
               15 - 23 Juni
 West Sumatera Pet Expo
 Kota Padang <br></br>
@@ -66,7 +66,7 @@ Kota Solok
               </Typography>
             </TimelineHeader>
             <TimelineBody>
-              <Typography color="gary" className="font-normal text-gray-600">
+              <Typography color="gray" className="font-normal text-gray-600">
               4 - 7 Juli
 PGAW Series 2024 ( Event Paralayang Internasional )
 Kabupaten Tanah Datar <br></br>

@@ -36,9 +36,13 @@ body {
   }
   .temperature {
     padding: 0px;
-    font-size: 300%;
+    font-size: 1rem;
     font-weight: bold;
     margin: 0px 0;
+  }
+
+  .weather-status{
+    font-size: 0.8rem;
   }
   
   
@@ -60,12 +64,19 @@ body {
   }
   
   .Hourplace{
-    font-size: 200%;
+    font-size: 1rem;
   }
 
-  @media (max-width: 375px){
+  @media (max-width: 376px){
     #container{
-      height: 125vh;
+      height: 125vh !important;
+    }
+    
+  }
+
+  @media (max-width: 920px){
+    .weather-forecast{
+      font-size: 0.5rem;
     }
     
   }

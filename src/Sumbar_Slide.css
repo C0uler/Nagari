@@ -63,8 +63,16 @@
   }
   
   .Showcase .demo-gallery img {
-    height: 60vh; /* Removed !important to avoid specificity issues */
-    width: 60vw; /* Removed !important to avoid specificity issues */
+    height: 60vh; 
+    width: 60vw; 
+  }
+
+
+  @media (max-width: 500px) {
+    .Showcase .demo-gallery img {
+      height: 60vh; 
+      width: 60vw; 
+    }
   }
   
   .Showcase .demo-gallery:not(.last) {
