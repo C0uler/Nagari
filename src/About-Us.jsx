@@ -6,6 +6,11 @@ import Qna_Section from "./Qna-Section.jsx"
 import SpeedDialWithTextOutside from "./Speed-Dial.jsx"
 import Footers from "./footer.jsx"
 
+import FotoBs from "./assets/bs.jpg"
+import FotoSha from "./assets/shakira.jpg"
+import FotoJor from "./assets/jordan.jpg"
+import FotoChan from "./assets/chandler.jpg"
+
 function animateFrom(elem, direction) {
   direction = direction || 1;
   var x = 0,
@@ -64,7 +69,7 @@ export default function FeaturedImageGallery() {
                         <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft flex justify-center">
                             <div className="family m-auto h-auto">
                                 <div class="about-card m-auto">
-                                <img width="479" src="https://picsum.photos/479/479?index=1" alt=""/>
+                                <img width="479" src={FotoJor} alt=""/>
                             </div>
                             </div>
                         </div>
@@ -83,7 +88,7 @@ export default function FeaturedImageGallery() {
 
                         <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight flex justify-center">
                             <div class="about-card m-auto">
-                            <img width="479" src="https://picsum.photos/479/479?index=2" alt=""/>
+                            <img width="479" src={FotoBs} alt=""/>
                             </div>
                         </div>
                         </div>
@@ -91,7 +96,7 @@ export default function FeaturedImageGallery() {
                         <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone">
                         <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft flex justify-center">
                             <div class="about-card m-auto">
-                            <img width="479" src="https://picsum.photos/479/479?index=3" alt=""/>
+                            <img width="479" src={FotoSha} alt=""/>
                             </div>
                         </div>
 
@@ -109,7 +114,7 @@ export default function FeaturedImageGallery() {
 
                         <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight flex justify-center">
                             <div class="about-card m-auto">
-                            <img width="479" src="https://picsum.photos/479/479?index=4" alt=""/>
+                            <img width="479" src={FotoChan} alt=""/>
                             </div>
                         </div>
                 </div>
