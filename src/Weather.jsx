@@ -153,16 +153,19 @@ function Weather() {
         <div className="weather-status">{weather['condition']}</div>
       </div>
 
-      <div className="weather-forecast grid grid-cols-5  m-auto mt-4">
+      <div className="weather-forecast grid grid-cols-3 md:grid-cols-5 m-auto mt-4">
         {forecast_value.map((forecast_data, index) => (
-          <div key={index} className={`weather-container flex flex-col w-full m-2 items-center gap-3 col-span-1`}>
-            <div className="weather-icon flex justify-center items-center h-24 w-24"><img className=' w-full h-full object-contain' src={forecast_data[0]['source']} alt="" /></div>
+          <div key={index} className={`weather-container m-auto h-auto ${index >= 3 ? "hidden" : ""} md:block`}>
+            <div className="weather-icon">
+              <img src={forecast_data[0]['source']} alt="" />
+            </div>
             <div className="Hourplace">{new Date().getHours() + index}:00</div>
-            <div className="temperature text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">{forecast_data[1].values.temperature}</div>
+            <div className="temperature">{forecast_data[1].values.temperature}</div>
             <div className="weather-status">{forecast_data[0]['condition']}</div>
           </div>
         ))}
       </div>
+
     </div>
     </>
   )

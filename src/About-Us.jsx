@@ -119,11 +119,14 @@ export default function FeaturedImageGallery() {
                         </div>
                 </div>
             </div>
-            <div className="container h-screen ">
-                <h1 className="text-center py-16 h-1/5">Tujuan dan Motivasi Kami</h1>
-                 <Qna_Section className="w-4/5">
+            <div className="container h-screen">
+  
+                <h1 className="text-center py-16 h-1/5 text-2xl md:text-3xl lg:text-5xl w-4/5 md:w-full">Tujuan dan Motivasi Kami</h1>
+                <div className="Qna-Container w-4/5 md:w-full text-sm md:text:base xl:text-lg">
+                      <Qna_Section>
 
-                </Qna_Section>
+                      </Qna_Section>
+                </div>
             </div>
             <SpeedDialWithTextOutside></SpeedDialWithTextOutside>
       </div>

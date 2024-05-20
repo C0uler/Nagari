@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet-src.js';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.js';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
 import "leaflet-control-geocoder"
-// import 'leaflet-control-geocoder/dist/Control.Geocoder.js';
+
 
 function userNavigator() {
   const [loading, setLoading] = useState(true);

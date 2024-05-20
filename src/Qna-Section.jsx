@@ -13,21 +13,21 @@ export default function DefaultAccordion() {
   return (
     <>
       <Accordion open={open === 1}>
-        <AccordionHeader className="text-center" onClick={() => handleOpen(1)}>Apa Motivasi dari Pembuatan Website Ini?</AccordionHeader>
+        <AccordionHeader className="text-center text-sm md:text:base xl:text-lg" onClick={() => handleOpen(1)}>Apa Motivasi dari Pembuatan Website Ini?</AccordionHeader>
         <AccordionBody className="text-sm md:text:base xl:text-lg">
           Motivasi dalam pembuatan website ini tentunya didasarkan kepadanya pengalaman dan juga orang orang sekitar kita yang bahkan tidak tau betapa indah dan luasnya Indonesia dengan beragam budaya dan juga alam yang indah
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 2}>
-        <AccordionHeader onClick={() => handleOpen(2)}>
+        <AccordionHeader className="text-center text-sm md:text:base xl:text-lg" onClick={() => handleOpen(2)}>
                 Apa Tujuan Dari Pembuatan Website Ini?
         </AccordionHeader>
         <AccordionBody className="text-sm md:text:base xl:text-lg">
             Website ini bertujuan untuk memperkenalan memperkenalan dan juga memberikan wawasan dan pengetahuan yang lebih luas lagi mengenai indonesia terutama di wilayah Sumatera Barat
         </AccordionBody>
       </Accordion>
-      <Accordion open={open === 3}>
-        <AccordionHeader onClick={() => handleOpen(3)}>
+      <Accordion className="text-center text-sm md:text:base xl:text-lg" open={open === 3}>
+        <AccordionHeader className="text-center text-sm md:text:base xl:text-lg" onClick={() => handleOpen(3)}>
           Apa Konsep dari Website Ini?
         </AccordionHeader>
         <AccordionBody className="text-sm md:text:base xl:text-lg">
@@ -35,7 +35,7 @@ export default function DefaultAccordion() {
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 4}>
-        <AccordionHeader onClick={() => handleOpen(4)}>
+        <AccordionHeader  className="text-center text-sm md:text:base xl:text-lg" onClick={() => handleOpen(4)}>
           Apa yang Belum Tercapai
         </AccordionHeader>
         <AccordionBody className="text-sm md:text:base xl:text-lg">

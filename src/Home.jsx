@@ -240,7 +240,7 @@ export default function StickyNavbar() {
             <Carrouse></Carrouse>
           </div>
 
-          <div className="About-Container About-Containers m-auto grid justify-center">
+          <div className="About-Containers m-auto grid justify-center">
             <About_Website></About_Website>
           </div>
         {/* <section>

@@ -32,4 +32,8 @@
     left: 0;
     animation: fillUp 15s linear infinite;
   }
+
+  .slider-background{
+    height: 100vh !important;
+  }
   

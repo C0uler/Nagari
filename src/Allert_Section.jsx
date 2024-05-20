@@ -20,16 +20,8 @@ export default function DialogDefault() {
           Thank you fro submiting the formuling, we realy appreciate your opinion and argument
         </DialogBody>
         <DialogFooter>
-          <Button
-            variant="text"
-            color="red"
-            onClick={handleOpen}
-            className="mr-1"
-          >
-            <span>Cancel</span>
-          </Button>
           <Button variant="gradient" color="green" onClick={handleOpen}>
-            <span>Confirm</span>
+            <span>Okay</span>
           </Button>
         </DialogFooter>
       </Dialog>

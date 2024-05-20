@@ -18,7 +18,7 @@
 }
 
 #MainImg-Container{
-  z-index: -5 !important;
+  z-index: 0 !important;
   width: 45vw;
   height: 35vh !important;
   margin-bottom: 0;
@@ -102,6 +102,7 @@
     margin: auto; /* Center the container horizontally */
     margin-top: 2%;
     padding: 0 2%; /* Optional: Add padding inside the container */
+    z-index: 0 !important;
   }
 
   .Carouser-container {
