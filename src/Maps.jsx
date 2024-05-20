@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import './Map.css'
 import "leaflet"
-// import "leaflet/dist/leaflet.css"
+import "leaflet/dist/leaflet.css"
 import Loader from './Loader.jsx'
 import {
   Button,
