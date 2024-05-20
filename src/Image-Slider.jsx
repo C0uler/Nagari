@@ -161,7 +161,7 @@ export default function CarouselWithContent() {
           className="h-full w-full object-cover"
         />
         <div className=" slider-background absolute inset-0 grid h-screen w-full items-end bg-black/75">
-          <div className="w-3/4 pl-12 pb-32 md:w-2/4 md:pl-20 md:pb-24 lg:pl-32 lg:pb-32">
+          <div className="w-3/4 pl-12 pb-32 md:w-2/4 md:pl-20 md:pb-34 lg:pl-32 lg:pb-44">
             <Typography
               variant="h1"
               color="white"

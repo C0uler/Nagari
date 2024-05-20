@@ -20,7 +20,7 @@ function userNavigator() {
       },
       (error) => {
         console.error(error);
-        alert("The direction method can be perfom please Accept Location Permision");
+        alert("The direction method cannot be performed. Please accept the location permission");
       }
     );
   }, []);
