@@ -120,7 +120,7 @@ export default function FeaturedImageGallery() {
             <Typography variant="h2">
               Weather Condition
             </Typography>
-            <Weather/>
+            {/* <Weather/> */}
         </div>
     </>
   );

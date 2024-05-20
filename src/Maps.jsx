@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import './Map.css'
 import "leaflet"
 import "leaflet/dist/leaflet.css"
-
+import L from 'leaflet';
 import marker from "./assets/marker-icon-2x.png"
 import Shadow from "./assets/marker-shadow.png"
 import Loader from './Loader.jsx'
@@ -24,7 +24,6 @@ import LeafletRouting from "./LeafletRouting.jsx";
 import {MapContainer, TileLayer, Popup, Marker, useMap} from "react-leaflet";
   
   function fetchMapsData(Location) {
-      console.log(Location);
         const [loading, setLoading] = useState([]);
         const [data, setData] = useState([]);
        
@@ -39,7 +38,6 @@ import {MapContainer, TileLayer, Popup, Marker, useMap} from "react-leaflet";
           fetch(apiUrl)
           .then((response) => response.json())
           .then((responseJson) => {
-            console.log(responseJson);
             setData(responseJson);
             setLoading(false)
           })
@@ -56,31 +54,31 @@ function Maps(Location) {
  
      const handleOpen = () => setOpen((cur) => !cur);
     const handleIsFavorite = () => setIsFavorite((cur) => !cur);
-    console.log(Location);
+
 
     if(loading){
         return <Loader></Loader>
       }
 
-    console.log(data[0]);
+
     // const position = [0,0];
     const position = [data[0].lat, data[0].lon];
 
-    var MarkerIcon = L.icon({
-      iconUrl: {marker},
-      shadowUrl: {Shadow},
+    
+
+    const MarkerIcon =  L.icon({
+      iconUrl: marker,
+      shadowUrl: Shadow,
   
-      iconSize:     [38, 95], // size of the icon
-      shadowSize:   [50, 64], // size of the shadow
-      iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-      shadowAnchor: [4, 62],  // the same for the shadow
-      popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+      iconSize:     [21, 38], // size of the icon
+      iconAnchor:   [10, 43], // point of the icon which will correspond to marker's location
+      popupAnchor:  [-1.3, -34] // point from which the popup should open relative to the iconAnchor
   });
 
   
   return (
     <>
-
+    
 
     <div className='MapCointainers w-full h-full'>
       <MapContainer center={position} zoom={20} markerZoomAnimation={true}>
@@ -88,7 +86,7 @@ function Maps(Location) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position}>
+        <Marker position={position} icon={MarkerIcon}>
           <Popup onClick={handleOpen}>
             <div>
               <div className='items-center justify-center h-full'>
@@ -149,9 +147,6 @@ function Maps(Location) {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               />
-              <Marker position={position} icon={MarkerIcon}>
-                <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
-              </Marker>
               <LeafletRouting position={position}/>
             </MapContainer>
           </div>
