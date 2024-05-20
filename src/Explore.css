@@ -7,11 +7,12 @@
   border: 2px solid red;
   width: 45vw;
   height: 40vh;
-  z-index: 0;
+  z-index: 3;
 }
 
 
 #MainImg-Container img{
+  z-index: 0 !important;
     width: 50%;
     height: 100%;
     /* overflow: overlay; */
