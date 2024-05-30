@@ -12,30 +12,47 @@ import StrongRainy from './assets/StrongRainy.svg';
 import "./weather.css"
 
 
+function fetchWeatherData(location) {
+  console.log(location)
+  const [loading, setLoading] = useState(true);
+  const [weatherData, setWeatherData] = useState(null);
+  const [error, setError] = useState(null);
 
+  useEffect(() => {
+    const fetchLocationAndWeather = async () => {
+      try {
+        // Fetch location data
+        const mapsApiUrl = `https://nominatim.openstreetmap.org/search?q=${location}&format=json&polygon_kml=1&addressdetails=1`;
+        const locationResponse = await fetch(mapsApiUrl);
+        const locationData = await locationResponse.json();
+        
 
-function fetchWeatherData() {
-    const [loading, setLoading] = useState([]);
-    const [data, setData] = useState([]);
-    const apiKey = 'Vb7CqXlBMysoAqDUniEMCVlS7A0yrKeQ'; // Replace with your Tomorrow.io API key
-    const location = "padang";
+        // Check if location data is available
+        if (locationData && locationData.length > 0) {
+          const position = `${locationData[0].lat},${locationData[0].lon}`;
 
-    // const apiUrl = `https://api.tomorrow.io/v4/weather/realtime?units=metric&location=${location}&apikey=${apiKey}`;
-    const apiUrl = `https://api.tomorrow.io/v4/weather/forecast?location=${location}&apikey=${apiKey}`;
+          // Fetch weather data
+          const apiKey = 'Vb7CqXlBMysoAqDUniEMCVlS7A0yrKeQ'; // Replace with your actual API key
+          const weatherApiUrl = `https://api.tomorrow.io/v4/weather/forecast?location=${position}&apikey=${apiKey}`;
+          const weatherResponse = await fetch(weatherApiUrl);
+          const weatherData = await weatherResponse.json();
 
+          // Set weather data
+          setWeatherData(weatherData.timelines.hourly);
+        } else {
+          throw new Error('Location data not found');
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    useEffect(() =>{
-      setLoading(true);
-      fetch(apiUrl)
-      .then((response) => response.json())
-      .then((responseJson) => {
-        console.log(responseJson);
-        setData(responseJson.timelines.hourly);
-        setLoading(false)
-      })
-      .catch(err => console.error(err));
-    }, []);
-   return {loading, data};
+    fetchLocationAndWeather();
+  }, [location]);
+  console.log(weatherData)
+  return { loading, weatherData, error };
 }
 
 function getWeatherCondition(weatherCode) {
@@ -119,59 +136,61 @@ function getWeatherCondition(weatherCode) {
 }
 
 
-function Weather() {
-  const {loading, data} = fetchWeatherData();
+function Weather( location ) {
+  const { loading, weatherData, error } = fetchWeatherData(location);
 
   if (loading) {
-    return <Loader></Loader>;
+    return <Loader />;
   }
 
-  
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
-  const forecast_value = [[getWeatherCondition(data[8].values.weatherCode),data[8]], [getWeatherCondition(data[33].values.weatherCode),data[9]], [getWeatherCondition(data[9].values.weatherCode),data[9]], [getWeatherCondition(data[10].values.weatherCode),data[10]], [getWeatherCondition(data[11].values.weatherCode),data[11]]];
-  console.log(forecast_value[0][0])
-  const weather = getWeatherCondition(data[31].values.weatherCode);
+  if (!weatherData) {
+    return <div>No weather data available</div>;
+  }
 
+  // Limit the forecast to the first 5 data points
+  const limitedForecast = weatherData.slice(0, 5).map((dataPoint, index) => {
+    const weatherCondition = getWeatherCondition(dataPoint.values.weatherCode);
+    return [weatherCondition, dataPoint];
+  });
 
+  // Get the current weather condition
+  const currentWeatherIndex = 0; // Assuming the first element is the current weather
+  const currentWeather = getWeatherCondition(weatherData[currentWeatherIndex].values.weatherCode);
 
-
-  // console.log(weather['source']);
-
-
-  // // // Call the fetchWeatherData function when the page loads
-
-  // // // Function to get weather condition based on weather code
-  
   return (
     <>
-    
-    <div className='flex justify-center items-center h-1/3 grid grid-row-2'>
-      <div className="weather-container m-auto">
-        <div className="weather-icon"><img src={weather['source']} alt="" /></div>
-        <div className="Hourplace">{new Date().getHours()}:00</div>
-        <div className="temperature">{data[7].values.temperature}</div>
-        <div className="weather-status">{weather['condition']}</div>
-      </div>
+      <div className='flex justify-center items-center h-1/3 grid grid-row-2'>
+        <div className="weather-container m-auto">
+          <div className="weather-icon"><img src={currentWeather['source']} alt="" /></div>
+          <div className="Hourplace">{new Date().getHours()}:00</div>
+          <div className="temperature">{weatherData[currentWeatherIndex].values.temperature}</div>
+          <div className="weather-status">{currentWeather['condition']}</div>
+        </div>
 
-      <div className="weather-forecast grid grid-cols-3 md:grid-cols-5 m-auto mt-4">
-        {forecast_value.map((forecast_data, index) => (
-          <div key={index} className={`weather-container m-auto h-auto ${index >= 3 ? "hidden" : ""} md:block`}>
-            <div className="weather-icon">
-              <img src={forecast_data[0]['source']} alt="" />
+        <div className="weather-forecast grid grid-cols-3 md:grid-cols-5 m-auto mt-4">
+          {limitedForecast.map((forecast_data, index) => (
+            <div key={index} className={`weather-container m-auto h-auto ${index >= 3 ? "hidden" : ""} md:block`}>
+              <div className="weather-icon">
+                <img src={forecast_data[0]['source']} alt="" />
+              </div>
+              <div className="Hourplace">{new Date().getHours() + index}:00</div>
+              <div className="temperature">{forecast_data[1].values.temperature}</div>
+              <div className="weather-status">{forecast_data[0]['condition']}</div>
             </div>
-            <div className="Hourplace">{new Date().getHours() + index}:00</div>
-            <div className="temperature">{forecast_data[1].values.temperature}</div>
-            <div className="weather-status">{forecast_data[0]['condition']}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
-    </div>
     </>
-  )
+  );
 }
 
-export default Weather
+export default Weather;
+
+
 
 
 
