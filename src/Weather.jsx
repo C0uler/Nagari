@@ -25,7 +25,7 @@ function fetchWeatherData(location) {
         const mapsApiUrl = `https://nominatim.openstreetmap.org/search?q=${location}&format=json&polygon_kml=1&addressdetails=1`;
         const locationResponse = await fetch(mapsApiUrl);
         const locationData = await locationResponse.json();
-        console.log(locationData)
+       
         
 
         // Check if location data is available
@@ -52,7 +52,7 @@ function fetchWeatherData(location) {
 
     fetchLocationAndWeather();
   }, [location]);
-  console.log(weatherData)
+ 
   return { loading, weatherData, error };
 }
 
