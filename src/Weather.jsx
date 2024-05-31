@@ -13,7 +13,7 @@ import "./weather.css"
 
 
 function fetchWeatherData(location) {
-  console.log(location)
+  location = location.position;
   const [loading, setLoading] = useState(true);
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
@@ -25,6 +25,7 @@ function fetchWeatherData(location) {
         const mapsApiUrl = `https://nominatim.openstreetmap.org/search?q=${location}&format=json&polygon_kml=1&addressdetails=1`;
         const locationResponse = await fetch(mapsApiUrl);
         const locationData = await locationResponse.json();
+        console.log(locationData)
         
 
         // Check if location data is available
